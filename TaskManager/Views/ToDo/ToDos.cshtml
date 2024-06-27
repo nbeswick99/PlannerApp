@@ -1,0 +1,27 @@
+@model ToDo
+@section Styles{
+  <link href=@Url.Contest("~/css/ToDo.css") rel = "stylesheet"> 
+}
+
+<div>
+  <div>
+    <form asp-action="CreateToDo" asp-controller="ToDo">
+      <div>
+        <label asp-for="TaskName">Task</label>
+        <input asp-for="TaskName">
+        <span asp-validation-for="TaskName"></span>
+      </div>
+      <div>
+        <label asp-for="Frequent">Task</label>
+        <input asp-for="Frequent">
+        <span asp-validation-for="Frequent"></span>
+      </div>
+    </form>
+  </div>
+  <div>
+    <h1>@DateTime.Now.Month <span>@DateTime.Now.Day</span></h1>
+    <div>
+
+    </div>
+  </div>
+</div>
