@@ -1,0 +1,36 @@
+.TaskContainer{
+  display:flex;
+  gap: 5em;
+  justify-content: center;
+}
+
+.form{
+  display:flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: end;
+}
+.button{
+  border: none;
+  background-color: dodgerblue;
+  color:white;
+  padding: .5em;
+}
+.link{
+  text-decoration: none;
+  background-color: dodgerblue;
+  color:white;
+  padding: .5em;
+}
+.eachTaskContainer{
+  display: flex;
+  padding: 1em;
+  border: 2px solid black;
+  justify-content: space-between;
+}
+
+.buttonContainer{
+  display: flex;
+  gap: 1em;
+  margin-left: 3em;
+}

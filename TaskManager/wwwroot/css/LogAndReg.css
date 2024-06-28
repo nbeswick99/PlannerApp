@@ -1,0 +1,26 @@
+.LogAndRegContainer{
+  display:flex;
+  gap:5em;
+  justify-content: center;
+}
+.InputsContainer{
+  display:flex;
+  flex-direction: column;
+}
+.inputs{
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+.form{
+  display:flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: end;
+}
+.button{
+  width:25%;
+  border: none;
+  background-color: dodgerblue;
+  color:white;
+}

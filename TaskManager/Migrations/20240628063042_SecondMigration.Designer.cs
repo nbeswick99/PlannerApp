@@ -11,8 +11,8 @@ using TaskManager.Models;
 namespace TaskManager.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20240626220752_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20240628063042_SecondMigration")]
+    partial class SecondMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -1,6 +1,6 @@
 #pragma warning disable CS8618
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Components;
 namespace TaskManager.Models;
 public class ToDo
 {
@@ -16,4 +16,6 @@ public class ToDo
 
   public int UserId {get;set;}
   public User? TaskUser{get;set;}
+
+  public List<Event> TasksEvent {get;set;} = new List<Event>();
 }

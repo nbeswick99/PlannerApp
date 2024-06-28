@@ -1,27 +1,35 @@
 @model User
 
 <div>
-  <form asp-action="CreateUser" asp-controller="Home" method="Post">
-    <div>
-      <label asp-for="Name">Name:</label>
-      <input asp-for="Name"> 
+  <form asp-action="CreateUser" asp-controller="Home" method="Post" class="form">
+    <div class="inputContainer">
+      <div class="inputs">
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name"> 
+      </div>
       <span asp-validation-for="Name"></span>
     </div>
-    <div>
-      <label asp-for="Email">Email:</label>
-      <input asp-for="Email"> 
+    <div class="inputContainer">
+      <div class="inputs">
+        <label asp-for="Email">Email:</label>
+        <input asp-for="Email">
+      </div>
       <span asp-validation-for="Email"></span>
     </div>
-    <div>
-      <label asp-for="Password">Password:</label>
-      <input asp-for="Password"> 
+    <div class="inputsContainer">
+      <div class="inputs">
+        <label asp-for="Password">Password:</label>
+        <input asp-for="Password"> 
+      </div>
       <span asp-validation-for="Password"></span>
     </div>
-    <div>
-      <label asp-for="Confirm">Confirm Password: </label>
-      <input asp-for="Confirm"> 
+    <div class="inputsContainer">
+      <div class="inputs">
+        <label asp-for="Confirm">Confirm Password: </label>
+        <input asp-for="Confirm"> 
+      </div>
       <span asp-validation-for="Confirm"></span>
     </div>
-    <button type="submit">Register</button>
+    <button type="submit" class="button">Register</button>
   </form>
 </div>

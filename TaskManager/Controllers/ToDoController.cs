@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TaskManager.Models;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.EntityFrameworkCore;
 
 namespace ToDoManager.Controllers;
 [SessionCheck] 
@@ -16,11 +15,6 @@ public class ToDoController : Controller
         _context = context;
     }
 
-  [HttpGet("ToDo/Dashboard")]
-  public ViewResult Dashboard() 
-  {
-    return View();
-  }
 
   [HttpGet("ToDo/AllToDos")]
   public ViewResult AllToDos()
@@ -52,7 +46,7 @@ public class ToDoController : Controller
     return View("EditToDo", ToDoToEdit);
   }
 
-  [HttpPost("ToDo/{toDoId}UpdateToDo")]
+  [HttpPost("ToDo/{toDoId}/UpdateToDo")]
   public IActionResult UpdateToDo(int ToDoId, ToDo updateToDo)
   {
     ToDo? OldToDo = _context.ToDos.FirstOrDefault(t => t.TaskId == ToDoId);

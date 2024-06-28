@@ -35,5 +35,6 @@ public class User
 
   //Navigation Properties
   List<ToDo> UserToDos {get;set;} = new();
+  List<Event> UserEvents {get;set;} = new();
 
 }

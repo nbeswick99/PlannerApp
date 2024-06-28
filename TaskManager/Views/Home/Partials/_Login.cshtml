@@ -1,16 +1,21 @@
 @model Login 
+
 <div>
-  <form asp-action="Login" asp-controller="Home" method="Post">
-    <div>
-      <label asp-for="LoginEmail">Email: </label>
-      <input asp-for="LoginEmail">
+  <form asp-action="Login" asp-controller="Home" method="Post" class="form">
+    <div class="inputContainer">
+      <div class="inputs">
+        <label asp-for="LoginEmail">Email: </label>
+        <input asp-for="LoginEmail">
+      </div>
       <span asp-validation-for="LoginEmail"></span>
     </div>
-    <div>
-      <label asp-for="LoginPassword">Password: </label>
-      <input asp-for="LoginPassword">
+    <div class="inputContainer">
+      <div class="inputs">
+        <label asp-for="LoginPassword">Password: </label>
+        <input asp-for="LoginPassword">
+      </div>
       <span asp-validation-for="LoginPassword"></span>
     </div>
-    <button type="submit">Login</button>
+    <button type="submit" class="button">Login</button>
   </form>
 </div>

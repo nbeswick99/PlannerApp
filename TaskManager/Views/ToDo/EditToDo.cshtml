@@ -1,0 +1,21 @@
+@model ToDo
+@section Styles{
+  <link href=@Url.Content("~/css/ToDo.css") rel="stylesheet"> 
+}
+
+<div>
+  <h1>Edit Task</h1>
+  <form asp-route-toDoId="@Model.TaskId" asp-action="UpdateToDo" asp-controller="ToDo" method="Post">
+    <div>
+      <label asp-for="TaskName">ToDo</label>
+      <input asp-for="TaskName">
+      <span asp-validation-for="TaskName"></span>
+    </div>
+    <div>
+      <label asp-for="Frequent">Frequent</label>
+      <input asp-for="Frequent">
+      <span asp-validation-for="Frequent"></span>
+    </div>
+    <button type="submit" class="button">Submit</button>
+  </form>
+</div>

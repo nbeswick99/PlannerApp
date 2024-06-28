@@ -1,0 +1,15 @@
+@model List<ToDo>
+<div>
+    <h1>All Tasks</h1>
+    @foreach(ToDo ToDo in Model){
+      <div class="eachTaskContainer">
+        <h3>@ToDo.TaskName</h3>
+        <div class="buttonContainer">
+          <form asp-route-toDoId="@ToDo.TaskId" asp-action="DestroyToDo" asp-controller="ToDo" method="Post">
+              <button type="submit" class="button">Delete</button>
+          </form>
+          <a asp-route-toDoId="@ToDo.TaskId" asp-action="EditToDo" asp-controller="ToDo" class="link">Edit</a>
+        </div>
+      </div>
+    }
+  </div>
