@@ -1,0 +1,27 @@
+@model List<Event>
+
+<div>
+  <div class="CalendarNav">
+    <button class="button">Yesterday</button>
+    <h1>Today</h1>
+    <button class="button">Tomorrow</button>
+  </div>
+  <div>
+    @foreach(Event Event in Model){
+      <div class="TaskContainer">
+        <div class="EventContainer">
+          <h3>@Event.EventTask.TaskName</h3>
+          <h3>@Event.EventTime.Month<span>/@Event.EventTime.Day</span></h3>
+        </div>
+        <div class="FormContainer">
+          <form asp-route-eventId="@Event.EventId" asp-action="DestroyEvent" asp-controller="Event" method="Post">
+            <button type="submit" class="button">Remove Event</button>
+          </form>
+          <form asp-route-eventId="@Event.EventId"asp-action="CompleteEvent" asp-controller="Event" method="post">
+            <button type="submit" class="button">Complete</button>
+          </form>
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -72,7 +72,12 @@ public class HomeController : Controller
     [HttpGet("Home/Dashboard")]
     public ViewResult Dashboard() 
     {
-    return View();
+        BigView BigView = new();
+        BigView.Events = _context.Events.Where(id => id.TaskOwnerId == (int)HttpContext.Session.GetInt32("UserId"))
+                                        .ToList();
+        BigView.ToDos = _context.ToDos.Where(id => id.UserId == (int)HttpContext.Session.GetInt32("UserId"))
+                                        .ToList();
+    return View("Dashboard", BigView);
     }
 
     [HttpPost("Home/Logout")]

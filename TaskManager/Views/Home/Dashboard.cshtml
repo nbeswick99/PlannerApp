@@ -1,2 +1,9 @@
+@model BigView
+@section Styles{
+  <link href=@Url.Content("~/css/Dashboard.css") rel = "stylesheet"> 
+}
 
-<h1> Hello <h1>
+<div class="DashboardContainer">
+  @await Html.PartialAsync("Partials/_Calendar", Model.Events)
+  @await Html.PartialAsync("Partials/_CreateEvent.cshtml", Model.ToDos)
+</div>

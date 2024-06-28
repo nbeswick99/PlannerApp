@@ -1,0 +1,14 @@
+@model List<ToDo>
+
+<div>
+  <h1>All Tasks</h1>
+  @foreach(ToDo Task in Model)
+  {
+    <div class="TaskContainer">
+      <h3>@Task.TaskName</h3>
+      <form asp-route-toDoId="@Task.TaskId" asp-action="CreateEvent" asp-controller="Event"method="post" class="FormPosition">
+        <button type="submit" class="button">Add Event</button> 
+      </form>
+    </div>
+  }
+</div>

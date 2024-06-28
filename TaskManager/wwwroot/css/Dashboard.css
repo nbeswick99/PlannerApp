@@ -1,0 +1,30 @@
+.DashboardContainer{
+  display: flex;
+  justify-content:center;
+  gap: 5em;
+}
+
+.TaskContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.EventContainer{
+  display: flex;
+  gap: 1em;
+}
+.button{
+  border: none;
+  background-color: dodgerblue;
+  color:white;
+  padding: .5em;
+}
+.FormContainer{
+  display:flex;
+  gap: 1em;
+  margin-left: 2em;
+}
+.CalendarNav{
+  display: flex;
+  gap:3em;
+  margin-bottom: 1em
+}
